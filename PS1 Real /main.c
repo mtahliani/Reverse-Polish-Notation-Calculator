@@ -20,7 +20,7 @@ int main() {
                 printf("%c", operator);
                 printf(" operator.\n");
                 printf("Result: ");
-                printf("%2.2f",addition(val1, val2));
+                printf("%2.2f", add(val1, val2));
                 //run the add function
                 break;
 
@@ -33,7 +33,7 @@ int main() {
                 printf("%c", operator);
                 printf(" operator.\n");
                 printf("Result: ");
-                printf("%2.2f",multiplication(val1, val2));
+                printf("%2.2f", multiply(val1, val2));
                 //run the multiply
                 break;
 
@@ -46,7 +46,7 @@ int main() {
                 printf("%c", operator);
                 printf(" operator.\n");
                 printf("Result: ");
-                printf("%2.2f",subtraction(val1, val2));
+                printf("%2.2f",subtract(val1, val2));
                 //run the subtract function
                 break;
 
@@ -59,7 +59,7 @@ int main() {
                 printf("%c", operator);
                 printf(" operator.\n");
                 printf("Result: ");
-                printf("%2.2f",division(val1, val2));
+                printf("%2.2f",divide(val1, val2));
                 //run the divide
                 break;
 

@@ -6,25 +6,25 @@
 #include <stdio.h>
 
 
-float addition(float val1, float val2) {
+float add(float val1, float val2) {
     float sum = val1 + val2;
 
     return sum;
 }
 
-float multiplication(float val1, float val2) {
+float multiply(float val1, float val2) {
     float product = val1 * val2;
 
     return product;
 }
 
-float subtraction(float val1, float val2) {
+float subtract(float val1, float val2) {
     float difference = val1 - val2;
 
     return difference;
 }
 
-float division(float val1, float val2) {
+float divide(float val1, float val2) {
 
     float quotient = val1 / val2;
 
