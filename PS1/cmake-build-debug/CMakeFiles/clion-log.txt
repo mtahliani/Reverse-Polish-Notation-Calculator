@@ -1,1 +1,16 @@
-CMakeLists.txt not found in /Users/milantahliani/Desktop/cs210-fall2021/CS210 GitLab/cs210/PS1 Select CMakeLists.txt
+/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /tmp/tmp.LRqd3oCgKT
+-- Configuring done
+CMake Error at CMakeLists.txt:6 (add_executable):
+  Cannot find source file:
+
+    cmake-build-debug/math.h
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .m .M .mm .h .hh .h++ .hm
+  .hpp .hxx .in .txx
+
+
+CMake Error at CMakeLists.txt:6 (add_executable):
+  No SOURCES given to target: PS1
+
+
+CMake Generate step failed.  Build files cannot be regenerated correctly.
