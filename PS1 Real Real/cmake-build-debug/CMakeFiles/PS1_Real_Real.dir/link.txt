@@ -1,0 +1,1 @@
+/usr/bin/cc -g CMakeFiles/PS1_Real_Real.dir/main.c.o CMakeFiles/PS1_Real_Real.dir/math.c.o -o PS1_Real_Real 
