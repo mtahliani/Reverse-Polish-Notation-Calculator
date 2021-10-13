@@ -77,6 +77,12 @@
 		<Unit filename="/tmp/PS2/main.c">
 			<Option target="PS2"/>
 		</Unit>
+		<Unit filename="/tmp/PS2/ps2.c">
+			<Option target="PS2"/>
+		</Unit>
+		<Unit filename="/tmp/PS2/ps2.h">
+			<Option target="PS2"/>
+		</Unit>
 		<Unit filename="/tmp/PS2/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

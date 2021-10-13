@@ -169,6 +169,33 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PS2.dir/build.make CMakeFiles/PS2.dir/main.c.s
 .PHONY : main.c.s
 
+ps2.o: ps2.c.o
+
+.PHONY : ps2.o
+
+# target to build an object file
+ps2.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PS2.dir/build.make CMakeFiles/PS2.dir/ps2.c.o
+.PHONY : ps2.c.o
+
+ps2.i: ps2.c.i
+
+.PHONY : ps2.i
+
+# target to preprocess a source file
+ps2.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PS2.dir/build.make CMakeFiles/PS2.dir/ps2.c.i
+.PHONY : ps2.c.i
+
+ps2.s: ps2.c.s
+
+.PHONY : ps2.s
+
+# target to generate assembly for a file
+ps2.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PS2.dir/build.make CMakeFiles/PS2.dir/ps2.c.s
+.PHONY : ps2.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -181,6 +208,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... ps2.o"
+	@echo "... ps2.i"
+	@echo "... ps2.s"
 .PHONY : help
 
 

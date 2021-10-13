@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "ps2.h"
 
 int main() {
     printf("Hello, World!\n");

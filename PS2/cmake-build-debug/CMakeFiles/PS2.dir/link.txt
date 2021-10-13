@@ -1,1 +1,1 @@
-/usr/bin/cc -g -rdynamic CMakeFiles/PS2.dir/main.c.o -o PS2 
+/usr/bin/cc -g -rdynamic CMakeFiles/PS2.dir/main.c.o CMakeFiles/PS2.dir/ps2.c.o -o PS2 

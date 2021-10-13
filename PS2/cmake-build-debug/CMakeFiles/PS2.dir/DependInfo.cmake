@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "/tmp/PS2/main.c" "/tmp/PS2/cmake-build-debug/CMakeFiles/PS2.dir/main.c.o"
+  "/tmp/PS2/ps2.c" "/tmp/PS2/cmake-build-debug/CMakeFiles/PS2.dir/ps2.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
