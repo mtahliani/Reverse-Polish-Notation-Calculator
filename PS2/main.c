@@ -6,6 +6,6 @@ int main() {
     int length = sizeof test / sizeof *test;
     int *largest, smallest;
     printf(test, length, largest, smallest);
-    printf("test for commit");
+    printf("test for commit again");
     return 0;
 }

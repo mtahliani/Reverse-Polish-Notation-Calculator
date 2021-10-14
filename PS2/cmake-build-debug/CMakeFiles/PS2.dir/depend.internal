@@ -3,3 +3,7 @@
 
 CMakeFiles/PS2.dir/main.c.o
  /tmp/PS2/main.c
+ /tmp/PS2/ps2.h
+CMakeFiles/PS2.dir/ps2.c.o
+ /tmp/PS2/ps2.c
+ /tmp/PS2/ps2.h
