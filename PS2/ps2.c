@@ -3,6 +3,7 @@
 //
 
 #include "ps2.h"
+#include <stdbool.h>
 
 void large_and_small(const int* array, int length, int* largest, int* smallest){
     *largest = *array;
@@ -38,7 +39,28 @@ double inner_product(const double* leftArray, const double* right_array, int len
 
 }
 
-int compareArrays(int* left, int left_length, int* right, int right_length){
-    int res;
-    return res;
+bool compareArrays(int* left, int left_length, int* right, int right_length){
+    bool continueOn = true;
+
+    if (right_length != left_length){
+        return false;
+    }
+    else if (right_length == left_length) {
+        for (int i = 0; i < left_length; i++){
+            if (*left == *right) {
+                *left++;
+                *right++;
+                continue;
+
+            }
+            else {
+                continueOn = false;
+                break;
+            }
+
+        }
+        return continueOn;
+
+    }
+
 }

@@ -3,3 +3,41 @@ Milan Tahliani
 Test cases for Problem Set 2
 _____________________________
 
+Problem 1 Output:
+
+
+/tmp/PS2/cmake-build-debug/PS2
+You entered an array of length: 20
+The largest value in this array is: 100
+The smallest value in this array is: -6
+
+Process finished with exit code 0
+_________________________________________
+
+Problem 2 Output:
+
+/tmp/PS2/cmake-build-debug/PS2
+You entered two arrays of length: 10
+Inner product result: 4158.761200
+
+Process finished with exit code 0
+__________________________________________
+
+Problem 3 Output:
+
+Test case a:
+
+/tmp/PS2/cmake-build-debug/PS2
+The arrays you entered are not identical because they do not contain the same values.
+Process finished with exit code 0
+
+/////////////////////////////////
+
+Test case b:
+
+/tmp/PS2/cmake-build-debug/PS2
+You entered an array of length 20, and an array of length 19
+The arrays you entered are not identical because they are not the same length and/or do not contain the same values.
+Process finished with exit code 0
+
+
