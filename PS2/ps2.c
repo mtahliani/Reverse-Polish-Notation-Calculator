@@ -32,8 +32,9 @@ double inner_product(const double* leftArray, const double* right_array, int len
     double sumTotal = 0;
     //initialize variable to be returned as the sum total
     for (int i = 0; i < length; i++){
-        sumTotal += (*leftArray++ * *right_array++);
+        sumTotal += (*leftArray ++ * *right_array ++);
         //compute and increment the product of the position
+
     }
     return sumTotal;
 
