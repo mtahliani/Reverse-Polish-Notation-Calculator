@@ -74,7 +74,19 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/tmp/tmp.zQpy2Zh6QE/list.c">
+			<Option target="PS3"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.zQpy2Zh6QE/list.h">
+			<Option target="PS3"/>
+		</Unit>
 		<Unit filename="/tmp/tmp.zQpy2Zh6QE/main.c">
+			<Option target="PS3"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.zQpy2Zh6QE/node.c">
+			<Option target="PS3"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.zQpy2Zh6QE/node.h">
 			<Option target="PS3"/>
 		</Unit>
 		<Unit filename="/tmp/tmp.zQpy2Zh6QE/CMakeLists.txt">

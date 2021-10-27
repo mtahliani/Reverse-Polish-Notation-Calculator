@@ -4,7 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "/tmp/tmp.zQpy2Zh6QE/list.c" "/tmp/tmp.zQpy2Zh6QE/cmake-build-debug/CMakeFiles/PS3.dir/list.c.o"
   "/tmp/tmp.zQpy2Zh6QE/main.c" "/tmp/tmp.zQpy2Zh6QE/cmake-build-debug/CMakeFiles/PS3.dir/main.c.o"
+  "/tmp/tmp.zQpy2Zh6QE/node.c" "/tmp/tmp.zQpy2Zh6QE/cmake-build-debug/CMakeFiles/PS3.dir/node.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

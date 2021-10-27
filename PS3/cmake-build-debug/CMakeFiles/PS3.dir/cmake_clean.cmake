@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/PS3.dir/list.c.o"
   "CMakeFiles/PS3.dir/main.c.o"
+  "CMakeFiles/PS3.dir/node.c.o"
   "PS3"
   "PS3.pdb"
 )
