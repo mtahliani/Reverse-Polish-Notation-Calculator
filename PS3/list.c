@@ -45,47 +45,41 @@ node* findNode(int value){
         return NULL;
     }
 
-    while (checker -> next != NULL){
+    while (checker != NULL){
         if (checker -> value == value){
             return checker;
         }
         checker = checker->next;
     }
-    return checker;
+    return NULL;
 }
 
 bool deleteNode (node* node){
     //Delete a node in the list
-    struct node* trav1 = HEAD;
-    struct node* trav2 = HEAD->next;
+    struct node* trav1 = NULL;
+    struct node* trav2 = HEAD;
 
     if (HEAD == NULL){
+        //empty list case
         return false;
     }
 
-    if (node == HEAD){
-        HEAD = HEAD->next;
-        free(trav1);
-        return true;
+    if (findNode(node) == NULL){
+        //node is not in list case
+        return false;
     }
 
-    while (trav2->next != node) {
-        trav1 = trav1->next;
-        trav2 = trav2->next;
+    while (trav2 != NULL) {
 
-        if (trav2->next == node){
-            trav2 = trav2->next;
+        if (trav2 == node){
+            trav1 = trav2->next;
             free(trav2);
-            trav1 = trav1->next;
-
+            trav2 = NULL;
             return true;
-
         }
+
     }
-
-
     return true;
-
 
 }
 
