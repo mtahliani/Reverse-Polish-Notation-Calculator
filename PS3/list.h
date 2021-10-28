@@ -15,5 +15,7 @@ void printList(void); //Print the values in the list
 int findLargest(void);
 void deleteLargest(void);
 int countNodes(void);
+void bubbleSort(void);
+void swap(node* node1Prev, node* node1, node* node2);
 
 #endif //PS3_LIST_H

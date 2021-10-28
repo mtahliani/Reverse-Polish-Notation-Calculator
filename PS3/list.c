@@ -141,6 +141,25 @@ int countNodes(void) {
     }
     cur = NULL;
     return counter;
+}
+
+void bubbleSort(void) {
 
 }
+
+void swap(node* node1Prev, node* node1, node* node2) {
+
+    if (node1Prev == NULL && node1 == HEAD){
+        HEAD = node2;
+    }
+    else {
+        node1Prev -> next = node2;
+    }
+    node1 -> next = node2 -> next;
+    node2 -> next = node1;
+
+    }
+
+
+
 
