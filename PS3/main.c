@@ -17,11 +17,6 @@ int main() {
         node* addedNode = createNode(tester[i]);
         addNode(addedNode);
     }
-
-    //node* testerNode = createNode(25);
-    //addNode(testerNode);
-    deleteNode(findNode(60));
     printList();
-
     return 0;
 }

@@ -8,7 +8,7 @@
 #include <stdlib.h>
 typedef struct node {
     int value;
-    node* next;
+    struct node* next;
 } node;
 
 node* HEAD = NULL;
@@ -51,35 +51,53 @@ node* findNode(int value){
         }
         checker = checker->next;
     }
+
+    checker = NULL;
     return NULL;
 }
 
 bool deleteNode (node* node){
     //Delete a node in the list
-    struct node* trav1 = NULL;
-    struct node* trav2 = HEAD;
+    struct node* cur = HEAD;
+    struct node* prev = HEAD;
 
     if (HEAD == NULL){
         //empty list case
         return false;
     }
 
-    if (findNode(node) == NULL){
-        //node is not in list case
-        return false;
+    if (HEAD == node) {
+        //case for when the HEAD is to be deleted
+        HEAD = cur->next;
+        free(cur);
+        cur = NULL;
+        prev = NULL;
+        return true;
     }
 
-    while (trav2 != NULL) {
+    cur = cur ->next;
+    //set up traversal by putting cur in front of previous
+    while (cur) {
 
-        if (trav2 == node){
-            trav1 = trav2->next;
-            free(trav2);
-            trav2 = NULL;
+        if (cur == node){
+            prev->next = cur->next;
+            free(cur);
+            cur = NULL;
+            prev = NULL;
             return true;
+        }
+        else {
+            cur = cur->next;
+            prev = prev->next;
         }
 
     }
-    return true;
+
+    cur = NULL;
+    prev = NULL;
+    //case for when it is not in
+
+    return false;
 
 }
 
@@ -91,3 +109,38 @@ void printList(void){
         checker = checker->next;
     }
 } //Print the values in the list
+
+int findLargest(void) {
+    //helper function for deleteLargest
+    node* cur = HEAD;
+    int largest = HEAD->value;
+    while (cur){
+        if (cur->value > largest){
+            largest = cur->value;
+        }
+        cur = cur->next;
+    }
+    cur = NULL;
+    return largest;
+}
+
+void deleteLargest(void) {
+    //delete all occurrences of the largest value
+    int large = findLargest();
+    while (findNode(large)) {
+        deleteNode(findNode(large));
+    }
+}
+
+int countNodes(void) {
+    int counter = 0;
+    node* cur = HEAD;
+    while (cur) {
+        counter++;
+        cur = cur->next;
+    }
+    cur = NULL;
+    return counter;
+
+}
+

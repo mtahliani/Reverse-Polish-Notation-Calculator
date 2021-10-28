@@ -9,7 +9,7 @@
 #include <stdlib.h>
 typedef struct node {
     int value;
-    node* next;
+    struct node* next;
 } node;
 
 node* createNode(int value) {
