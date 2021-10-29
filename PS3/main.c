@@ -1,13 +1,6 @@
 #include <stdio.h>
-#include <stdbool.h>
 #include "node.h"
 #include "list.h"
-#include <stdlib.h>
-typedef struct node {
-    int value;
-    node* next;
-} node;
-
 int main() {
 
     //tests for addNode and createNode
@@ -23,6 +16,7 @@ int main() {
     printList();
     printf("\n");
     printf("\n");
+
 
     //test for countNodes
     int count = countNodes();
@@ -40,9 +34,8 @@ int main() {
     printf("\n");
 
 
-
     //test for sorting
-    printf("The list after running bubbleSort algorithm: \n");
+    printf("The list after running bubbleSort: \n");
     bubbleSort();
     printList();
 

@@ -4,8 +4,6 @@
 
 #include "list.h"
 #include "node.h"
-#include <stdbool.h>
-#include <stdlib.h>
 typedef struct node {
     int value;
     struct node* next;
@@ -48,8 +46,10 @@ node* findNode(int value){
     while (checker != NULL){
         if (checker -> value == value){
             return checker;
+            //if values are the same checker is the val
         }
         checker = checker->next;
+        //increment checker to move to next node
     }
 
     checker = NULL;
@@ -80,6 +80,7 @@ bool deleteNode (node* node){
     while (cur) {
 
         if (cur == node){
+            //when cur is the node to be deleted run the sort algorithm
             prev->next = cur->next;
             free(cur);
             cur = NULL;
@@ -89,6 +90,7 @@ bool deleteNode (node* node){
         else {
             cur = cur->next;
             prev = prev->next;
+            //otherwise, iterate both
         }
 
     }
@@ -117,6 +119,7 @@ int findLargest(void) {
     while (cur){
         if (cur->value > largest){
             largest = cur->value;
+            //if there is a larger value, reassign largest
         }
         cur = cur->next;
     }
@@ -133,6 +136,7 @@ void deleteLargest(void) {
 }
 
 int countNodes(void) {
+
     int counter = 0;
     node* cur = HEAD;
     while (cur) {
@@ -152,13 +156,16 @@ void bubbleSort(void){
         node*cur = HEAD;
 
         while (cur -> next!= NULL){
+
             if (cur->value > cur->next->value){
+                //case for using swap
                 node*temp = cur->next;
                 swap(prev, cur, cur->next);
                 swappy = 1;
                 prev = temp;
             }
             else {
+                //otherwise, move them forward
                 prev = cur;
                 cur = cur->next;
             }
@@ -173,6 +180,7 @@ void swap(node* node1Prev, node* node1, node* node2) {
 
     if (node1Prev == NULL && node1 == HEAD){
         HEAD = node2;
+        //if node to swap is HEAD
     }
     else {
         node1Prev -> next = node2;
