@@ -143,8 +143,30 @@ int countNodes(void) {
     return counter;
 }
 
-void bubbleSort(void) {
+void bubbleSort(void){
+    int swappy;
+    do {
+        swappy = 0;
 
+        node*prev = NULL;
+        node*cur = HEAD;
+
+        while (cur -> next!= NULL){
+            if (cur->value > cur->next->value){
+                node*temp = cur->next;
+                swap(prev, cur, cur->next);
+                swappy = 1;
+                prev = temp;
+            }
+            else {
+                prev = cur;
+                cur = cur->next;
+            }
+        }
+        prev = NULL;
+        cur = NULL;
+
+    } while (swappy);
 }
 
 void swap(node* node1Prev, node* node1, node* node2) {
