@@ -1,0 +1,13 @@
+/tmp/tmp.zQpy2Zh6QE/cmake-build-debug/PS3
+This is the list after running addNode and createNode:
+89 39 18 96 71 25 2 55 60 -8 9 42 69 96 24
+
+Number of nodes in the list using countNodes:
+15
+
+The list after running deleteLargest:
+89 39 18 71 25 2 55 60 -8 9 42 69 24
+
+The list after running bubbleSort:
+-8 2 9 18 24 25 39 42 55 60 69 71 89
+Process finished with exit code 0
