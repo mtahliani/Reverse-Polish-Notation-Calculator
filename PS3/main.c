@@ -6,8 +6,8 @@ int main() {
     //tests for addNode and createNode
     int tester[] = {89, 39, 18, 96, 71, 25, 2, 55, 60, -8, 9, 42, 69, 96, 24};
     int testerLength = sizeof (tester) / sizeof (int);
-    for (int i = 0; i < testerLength; i++) {
-        node* addedNode = createNode(tester[i]);
+    for (int iterator = 0; iterator < testerLength; iterator++) {
+        node* addedNode = createNode(tester[iterator]);
         addNode(addedNode);
     }
 
@@ -27,11 +27,16 @@ int main() {
 
 
     //test for deleteLargest
-    printf("The list after running deleteLargest: \n");
+    printf("The list and number of nodes remaining in the list after running deleteLargest: \n");
     deleteLargest();
     printList();
     printf("\n");
+    int count2 = countNodes();
+    printf("%d", count2);
     printf("\n");
+    printf("\n");
+
+
 
 
     //test for sorting
