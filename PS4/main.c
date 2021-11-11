@@ -12,12 +12,18 @@ typedef struct node {
     struct node *next;
 } node;
 
-int main() {
-    push(createNode(54.43, 1));
-    push(createNode(45.45, 1));
-    printList();
-    clearStack();
-    printList();
+char expression1[] = "24.2 12 / 3 / 17 + +";
+char expression2[] = "+";
+char expression3[] = "17 22 / 4 * 16 -";
+char expression4[] = "2 8 ^ 3 /";
+char expression5[] = "17 22 33 / 4 + 2";
+char expression6[] = "";
+char expression7[] = "8 7 + 6 - 5 / 4 * 3 ^";
 
+int main() {
+    createNode(43.34, 1);
     return 0;
 }
+
+
+

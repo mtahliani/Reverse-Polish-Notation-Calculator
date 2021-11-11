@@ -16,7 +16,7 @@ typedef struct node {
     struct node *next;
 } node;
 
-enum type {operator, number};
+
 
 node* createNode (double value, int type) {
 
@@ -28,6 +28,8 @@ node* createNode (double value, int type) {
     node1 -> value = value;
     node1 -> type = type;
     node1 -> next = NULL;
+
+    return node1;
 }
 
 

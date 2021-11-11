@@ -8,4 +8,9 @@
 #ifndef PS4_ERRORS_H
 #define PS4_ERRORS_H
 
+#define NOPROBLEM 0
+#define TOOMANYOPERANDS 1
+#define INVALIDINPUT 2
+#define TOOMANYOPERATORS 3
+
 #endif //PS4_ERRORS_H

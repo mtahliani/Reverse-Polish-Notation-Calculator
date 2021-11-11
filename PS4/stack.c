@@ -16,7 +16,6 @@ typedef struct node {
     struct node *next;
 } node;
 
-enum type{operator, number};
 
 node* HEAD = NULL;
 
@@ -37,23 +36,38 @@ bool push(node* node) {
 }
 
 node* pop() {
-    if (HEAD -> next != NULL) {
 
+    if (HEAD == NULL) {
+        printf("There is nothing to pop as the stack is empty.");
+        exit (EXIT_FAILURE);
+    }
+
+    else {
+        node* popper = HEAD;
+        HEAD = popper -> next;
+        return popper;
     }
 }
 
 node* peek() {
 
-    if (HEAD -> next == NULL){
-        return HEAD;
+    node* tempPtr = HEAD;
+    if (HEAD == NULL){
+        printf("The stack is empty.");
+        exit (EXIT_FAILURE);
     }
     else {
-        return HEAD->next;
+        return tempPtr;
     }
 }
 
 void clearStack(){
 
+    while (HEAD) {
+        node* popper = pop();
+        free(popper);
+        popper = NULL;
+    }
 }
 
 void printList(){
@@ -61,6 +75,16 @@ void printList(){
     while (pointer != NULL){
         printf("%f\n", pointer->value);
         pointer = pointer -> next;
+    }
+}
+
+bool isEmpty() {
+    if (HEAD == NULL){
+        return true;
+
+    }
+    else {
+        return false;
     }
 }
 

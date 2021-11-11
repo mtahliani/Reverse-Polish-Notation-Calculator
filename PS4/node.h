@@ -13,6 +13,8 @@
 
 typedef struct node node;
 
+enum type {operator, number};
+
 node* createNode(double value, int type);
 
 #endif //PS4_NODE_H

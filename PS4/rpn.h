@@ -10,16 +10,10 @@
 
 typedef struct node node;
 
+int isOperator();
+
 double evaluate (char* expression, int* status);
 
-float add(float val1, float val2);
-
-float multiply(float val1, float val2);
-
-float subtract(float val1, float val2);
-
-float divide(float val1, float val2);
-
-float recursivePower(float val1, float val2);
+double recursivePower(double val1, double val2);
 
 #endif //PS4_RPN_H

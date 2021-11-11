@@ -11,8 +11,11 @@ typedef struct node {
 } node;
 
 node* createNode(int value) {
+    //printf("HELLO");
 
     node* node1 = (node*) malloc(sizeof(node));
+    //printf("HELLO");
+
     //use malloc to dynamically allocate
     if (node1 == NULL) {
         exit(EXIT_FAILURE);
@@ -20,6 +23,9 @@ node* createNode(int value) {
     node1 -> value = value;
 
     node1 -> next = NULL;
+    printf("HELLO");
+
+    //return node1;
 }
 
 

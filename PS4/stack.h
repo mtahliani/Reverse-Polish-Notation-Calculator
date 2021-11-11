@@ -26,4 +26,6 @@ void clearStack();
 
 void printList();
 
+bool isEmpty();
+
 #endif //PS4_STACK_H
