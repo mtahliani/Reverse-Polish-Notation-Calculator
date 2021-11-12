@@ -12,16 +12,19 @@ typedef struct node {
     struct node *next;
 } node;
 
-char expression1[] = "24.2 12 / 3 / 17 + +";
-char expression2[] = "+";
-char expression3[] = "17 22 / 4 * 16 -";
-char expression4[] = "2 8 ^ 3 /";
-char expression5[] = "17 22 33 / 4 + 2";
-char expression6[] = "";
-char expression7[] = "8 7 + 6 - 5 / 4 * 3 ^";
+char* expression1 = "24.2 12 / 3 / 17 + +";
+char* expression2 = "+";
+char* expression3 = "17 22 / 4 * 16 -";
+char* expression4 = "2 8 ^ 3 /";
+char* expression5 = "17 22 33 / 4 + 2";
+char* expression6 = "";
+char* expression7 = "8 7 + 6 - 5 / 4 * 3 ^";
+char* tester = "8 7 +";
+int* status;
 
 int main() {
-    createNode(43.34, 1);
+    double result = evaluate(tester, status);
+    printf("%f", result);
     return 0;
 }
 

@@ -19,63 +19,87 @@ typedef struct node {
 
 double evaluate (char* expression, int* status){
     clearStack();
-    char**numCheckerReference; //to be checked as integer
+    char**numCheckerReference; //to be checked as number
     char* token = strtok(expression, " ");
     while (token) {
+
         if (isOperator(*token) == -1){
             //the token is not an operator
 
             //check if it is a number
-            double numChecker = strtod(token, **numCheckerReference);
-            if (*numCheckerReference == 0) {
+            double numChecker = strtod(token, numCheckerReference);
+            if (**numCheckerReference == 0) {
                 push(createNode(numChecker, number));
             }
             else {
                 //case for invalid input
+                printf("Invalid input for an RPN calculator.");
                 *status = INVALIDINPUT;
                 clearStack();
-                printf("Invalid input.");
                 return 0.0;
             }
         }
+
         else {
             //token here is an operator
-            node *first = pop();
-            float numFirst = first->value;
-            free(first);
 
+            //empty stack case - throw the error
             if (isEmpty()) {
-                *status = TOOMANYOPERATORS;
+                printf("You threw an operator into an empty stack.");
+                *status = EMPTYSTACK;
                 clearStack();
-                printf("Too many operators");
                 return 0.0;
             }
 
+            else {
+                //otherwise begin to retrieve the values
+                node *first = pop();
+                float numFirst = first->value;
+                free(first);
 
-            node *second = pop();
-            float numSecond = second->value;
-            free(second);
+                node *second = pop();
+                float numSecond = second->value;
 
-            switch (isOperator(*token)) {
-                case 0:
-                    push(createNode(numFirst + numSecond, number));
-                    break;
-                case 1:
-                    push(createNode(numFirst - numSecond, number));
-                    break;
-                case 2:
-                    push(createNode(numFirst * numSecond, number));
-                    break;
-                case 3:
-                    push(createNode(numFirst / numSecond, number));
-                    break;
-                case 4:
-                    push (createNode(recursivePower(numFirst, numSecond), number));
-                    break;
-                default:
-                    exit(EXIT_FAILURE);
-                    break;
+                if (second == NULL) {
+                    //case for when there is only one operand in the stack
+                    *status = TOOLITTLEOPERANDS;
+                    clearStack();
+                    printf("Not enough operands");
+                    return 0.0;
+                }
 
+                if (numSecond == 0.0 && isOperator(*token) == 3) {
+                    //case for divide by zero
+                    *status = DIVIDEBYZERO;
+                    clearStack();
+                    printf("Divide by zero error");
+                    return 0.0;
+                }
+
+                free(second);
+
+                switch (isOperator(*token)) {
+
+                    case 0:
+                        push(createNode(numFirst + numSecond, number));
+                        break;
+                    case 1:
+                        push(createNode(numFirst - numSecond, number));
+                        break;
+                    case 2:
+                        push(createNode(numFirst * numSecond, number));
+                        break;
+                    case 3:
+                        push(createNode(numFirst / numSecond, number));
+                        break;
+                    case 4:
+                        push(createNode(recursivePower(numFirst, numSecond), number));
+                        break;
+                    default:
+                        exit(EXIT_FAILURE);
+                        break;
+
+                }
             }
         }
         token = strtok(NULL, " ");
