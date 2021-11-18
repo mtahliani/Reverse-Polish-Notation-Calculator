@@ -44,6 +44,26 @@ errors.h
 rpn.h
 /tmp/tmp.651BnePsHc/rpn.h
 
+/tmp/tmp.651BnePsHc/rpn.c
+stdio.h
+-
+stdlib.h
+-
+stdbool.h
+-
+node.h
+/tmp/tmp.651BnePsHc/node.h
+stack.h
+/tmp/tmp.651BnePsHc/stack.h
+errors.h
+/tmp/tmp.651BnePsHc/errors.h
+rpn.h
+/tmp/tmp.651BnePsHc/rpn.h
+rpn.h
+/tmp/tmp.651BnePsHc/rpn.h
+string.h
+-
+
 /tmp/tmp.651BnePsHc/rpn.h
 stdio.h
 -

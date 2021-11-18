@@ -12,10 +12,10 @@ void printt();
 
 typedef struct node node;
 
-bool push(node* node);
+node* push(node* node);
 //push a node to top of the stack
 
-node* pop();
+node* pop(void);
 //pop the top of the stack
 
 node* peek();

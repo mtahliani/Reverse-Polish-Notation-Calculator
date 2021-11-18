@@ -19,36 +19,63 @@ typedef struct node {
 
 node* HEAD = NULL;
 
-bool push(node* node) {
+node* push(node* node) {
     if (node == NULL){
-        return false;
+        return NULL;
         //invalid input
     }
 
     if (HEAD == NULL) {
         HEAD = node;
-        return true;
+        return node;
         //list is empty
     }
     node -> next = HEAD;
     HEAD = node;
-    return true;
+    return node;
+
 }
 
-node* pop() {
 
-    if (HEAD == NULL) {
+
+/*node* pop() {
+
+    /*if (HEAD == NULL) {
         printf("There is nothing to pop as the stack is empty.");
-        exit (EXIT_FAILURE);
+        return NULL;
+    }
+
+    if (HEAD -> next == NULL){
+        node* temp = HEAD;
+        HEAD -> next = NULL;
+        return temp;
+    }
+
+    if (!HEAD) {
+        return NULL;
     }
 
     else {
         node* popper = HEAD;
         HEAD = popper -> next;
         return popper;
+
     }
 }
+*/
 
+node *pop(void) {
+    // Checks for empty stack
+    if (!HEAD) {
+        return NULL;
+    } else {
+        // Moves head down stack and tracks former node
+        node *current = HEAD;
+        HEAD = current->next;
+
+        return current;
+    }
+}
 node* peek() {
 
     node* tempPtr = HEAD;

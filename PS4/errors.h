@@ -16,4 +16,6 @@
 #define DIVIDEBYZERO 5
 #define EMPTYSTACK 6
 
+void receiveErrorMessage(int errorCode);
+
 #endif //PS4_ERRORS_H

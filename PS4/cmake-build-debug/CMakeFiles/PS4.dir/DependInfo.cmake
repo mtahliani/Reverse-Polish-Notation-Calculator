@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "/tmp/tmp.651BnePsHc/errors.c" "/tmp/tmp.651BnePsHc/cmake-build-debug/CMakeFiles/PS4.dir/errors.c.o"
   "/tmp/tmp.651BnePsHc/main.c" "/tmp/tmp.651BnePsHc/cmake-build-debug/CMakeFiles/PS4.dir/main.c.o"
   "/tmp/tmp.651BnePsHc/node.c" "/tmp/tmp.651BnePsHc/cmake-build-debug/CMakeFiles/PS4.dir/node.c.o"
   "/tmp/tmp.651BnePsHc/rpn.c" "/tmp/tmp.651BnePsHc/cmake-build-debug/CMakeFiles/PS4.dir/rpn.c.o"

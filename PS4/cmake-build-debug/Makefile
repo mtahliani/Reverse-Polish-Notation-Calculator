@@ -142,6 +142,33 @@ PS4/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PS4.dir/build.make CMakeFiles/PS4.dir/build
 .PHONY : PS4/fast
 
+errors.o: errors.c.o
+
+.PHONY : errors.o
+
+# target to build an object file
+errors.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PS4.dir/build.make CMakeFiles/PS4.dir/errors.c.o
+.PHONY : errors.c.o
+
+errors.i: errors.c.i
+
+.PHONY : errors.i
+
+# target to preprocess a source file
+errors.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PS4.dir/build.make CMakeFiles/PS4.dir/errors.c.i
+.PHONY : errors.c.i
+
+errors.s: errors.c.s
+
+.PHONY : errors.s
+
+# target to generate assembly for a file
+errors.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PS4.dir/build.make CMakeFiles/PS4.dir/errors.c.s
+.PHONY : errors.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -259,6 +286,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... PS4"
+	@echo "... errors.o"
+	@echo "... errors.i"
+	@echo "... errors.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

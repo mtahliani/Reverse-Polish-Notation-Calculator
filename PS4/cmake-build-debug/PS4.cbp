@@ -74,6 +74,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/tmp/tmp.651BnePsHc/errors.c">
+			<Option target="PS4"/>
+		</Unit>
 		<Unit filename="/tmp/tmp.651BnePsHc/errors.h">
 			<Option target="PS4"/>
 		</Unit>

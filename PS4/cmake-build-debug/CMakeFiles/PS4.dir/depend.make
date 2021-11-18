@@ -20,7 +20,6 @@ CMakeFiles/PS4.dir/rpn.c.o: ../rpn.h
 CMakeFiles/PS4.dir/rpn.c.o: ../stack.h
 
 CMakeFiles/PS4.dir/stack.c.o: ../errors.h
-CMakeFiles/PS4.dir/stack.c.o: ../node.c
 CMakeFiles/PS4.dir/stack.c.o: ../node.h
 CMakeFiles/PS4.dir/stack.c.o: ../rpn.h
 CMakeFiles/PS4.dir/stack.c.o: ../stack.c

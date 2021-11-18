@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/PS4.dir/errors.c.o"
   "CMakeFiles/PS4.dir/main.c.o"
   "CMakeFiles/PS4.dir/node.c.o"
   "CMakeFiles/PS4.dir/rpn.c.o"

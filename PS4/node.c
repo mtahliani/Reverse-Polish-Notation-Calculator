@@ -13,7 +13,7 @@
 typedef struct node {
     double value;
     int type;
-    struct node *next;
+    node *next;
 } node;
 
 
@@ -29,7 +29,7 @@ node* createNode (double value, int type) {
     node1 -> type = type;
     node1 -> next = NULL;
 
-    return node1;
+    //return node1;
 }
 
 
