@@ -20,6 +20,14 @@ double evaluate (char* expression, int* status){
     clearStack();
     char**numCheckerReference; //to be checked as number
     char* token = strtok(expression, " ");
+
+    if (token == NULL) {
+        *status = INVALIDINPUT;
+        clearStack();
+        receiveErrorMessage(*status);
+        return 0.0;
+    }
+
     while (token != NULL) {
 
         if (isOperator(token) == -1){
@@ -36,18 +44,27 @@ double evaluate (char* expression, int* status){
                 *status = INVALIDINPUT;
                 clearStack();
                 receiveErrorMessage(*status);
+                return 0.0;
             }
         }
 
         else {
             //token here is an operator
+
             //empty stack case - throw the error
             if (isEmpty()) {
-                *status = EMPTYSTACK;
+                *status = TOOLITTLEOPERANDS;
                 clearStack();
                 receiveErrorMessage(*status);
+                return 0.0;
             }
-
+            //another error case of too many operators when there is an operator here and not two numbers
+            if (peek() -> next == NULL){
+                *status = TOOMANYOPERATORS;
+                clearStack();
+                receiveErrorMessage(*status);
+                return 0.0;
+            }
             else {
                 //otherwise begin to retrieve the values
                 node *first = pop();
@@ -57,7 +74,12 @@ double evaluate (char* expression, int* status){
                 node *second = pop();
                 float numSecond = second->value;
 
-
+                if (numSecond == 0 || numFirst == 0 && token == "/"){
+                    *status = DIVIDEBYZERO;
+                    clearStack();
+                    receiveErrorMessage(*status);
+                    return 0.0;
+                }
                 // check whether stack is empty already
                 if (first == NULL) {
                     //case for when there is only one operand in the stack
@@ -66,19 +88,10 @@ double evaluate (char* expression, int* status){
                     receiveErrorMessage(*status);
                     return 0.0;
                 }
-                if (numSecond == 0.0 && token == "/") {
-                    //case for divide by zero
-                    *status = DIVIDEBYZERO;
-                    //clearStack();
-                    printf("Divide by zero error");
-                    return 0.0;
-                }
-
                 switch (isOperator(token)) {
 
                     case 0:
                         push(createNode(numFirst + numSecond, number));
-                        token = NULL;
                         break;
                     case 1:
                         push(createNode(numSecond - numFirst, number));
@@ -90,7 +103,15 @@ double evaluate (char* expression, int* status){
                         push(createNode(numSecond / numFirst, number));
                         break;
                     case 4:
-                        push(createNode(recursivePower(numSecond, numFirst), number));
+                        if (numFirst != (int)numFirst) {
+                            push(createNode(recursivePower(numSecond, numFirst), number));
+                        }
+                        else {
+                            *status = DECIMALPOWER;
+                            clearStack();
+                            receiveErrorMessage(*status);
+                            return 0.0;
+                        }
                         break;
                     default:
                         exit(EXIT_FAILURE);
@@ -100,9 +121,13 @@ double evaluate (char* expression, int* status){
             }
         }
         token = strtok(NULL, " ");
-
-
     }
+    if (peek() -> next != NULL){
+        *status = TOOMANYOPERANDS;
+        clearStack();
+        receiveErrorMessage(*status);
+    }
+
     }
 
 
@@ -125,6 +150,7 @@ int isOperator(char* token) {
             return 4;
             break;
         default:
+
             return -1;
             break;
     }

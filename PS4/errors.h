@@ -14,7 +14,7 @@
 #define TOOMANYOPERATORS 3
 #define TOOLITTLEOPERANDS 4
 #define DIVIDEBYZERO 5
-#define EMPTYSTACK 6
+#define DECIMALPOWER 6
 
 void receiveErrorMessage(int errorCode);
 

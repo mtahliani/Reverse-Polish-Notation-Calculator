@@ -80,8 +80,7 @@ node* peek() {
 
     node* tempPtr = HEAD;
     if (HEAD == NULL){
-        printf("The stack is empty.");
-        exit (EXIT_FAILURE);
+        return NULL;
     }
     else {
         return tempPtr;

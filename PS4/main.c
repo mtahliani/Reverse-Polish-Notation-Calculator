@@ -19,12 +19,11 @@ char expression4[] = {"2 8 ^ 3 /"};
 char expression5[] = {"17 22 33 / 4 + 2"};
 char expression6[] = {""};
 char expression7[] = {"8 7 + 6 - 5 / 4 * 3 ^"};
-char tester[] = {"1"};
+char tester[] = {"h"};
 int status = 0;
-int* status_p = &status;
 
 int main() {
-    double result = evaluate(expression7, &status);
+    double result = evaluate(tester, &status);
     printf("%f\n", result);
 
 }
