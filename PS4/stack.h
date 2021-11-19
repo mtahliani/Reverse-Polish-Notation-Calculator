@@ -8,7 +8,6 @@
 #ifndef PS4_STACK_H
 #define PS4_STACK_H
 
-void printt();
 
 typedef struct node node;
 

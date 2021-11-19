@@ -37,33 +37,6 @@ node* push(node* node) {
 }
 
 
-
-/*node* pop() {
-
-    /*if (HEAD == NULL) {
-        printf("There is nothing to pop as the stack is empty.");
-        return NULL;
-    }
-
-    if (HEAD -> next == NULL){
-        node* temp = HEAD;
-        HEAD -> next = NULL;
-        return temp;
-    }
-
-    if (!HEAD) {
-        return NULL;
-    }
-
-    else {
-        node* popper = HEAD;
-        HEAD = popper -> next;
-        return popper;
-
-    }
-}
-*/
-
 node *pop(void) {
     // Checks for empty stack
     if (!HEAD) {

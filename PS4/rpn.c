@@ -103,7 +103,7 @@ double evaluate (char* expression, int* status){
                         push(createNode(numSecond / numFirst, number));
                         break;
                     case 4:
-                        if (numFirst != (int)numFirst) {
+                        if (numFirst == (int)numFirst) {
                             push(createNode(recursivePower(numSecond, numFirst), number));
                         }
                         else {
@@ -126,6 +126,7 @@ double evaluate (char* expression, int* status){
         *status = TOOMANYOPERANDS;
         clearStack();
         receiveErrorMessage(*status);
+        return 0.0;
     }
 
     }
@@ -150,7 +151,7 @@ int isOperator(char* token) {
             return 4;
             break;
         default:
-
+            //check if it is a number - maybe use byte size?
             return -1;
             break;
     }
