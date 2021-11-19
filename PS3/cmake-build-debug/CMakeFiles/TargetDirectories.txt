@@ -1,3 +1,0 @@
-/tmp/tmp.zQpy2Zh6QE/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/tmp/tmp.zQpy2Zh6QE/cmake-build-debug/CMakeFiles/PS3.dir
-/tmp/tmp.zQpy2Zh6QE/cmake-build-debug/CMakeFiles/edit_cache.dir
