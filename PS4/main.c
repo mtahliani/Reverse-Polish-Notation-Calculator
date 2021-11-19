@@ -19,14 +19,13 @@ char expression4[] = {"2 8 ^ 3 /"};
 char expression5[] = {"17 22 33 / 4 + 2"};
 char expression6[] = {""};
 char expression7[] = {"8 7 + 6 - 5 / 4 * 3 ^"};
-char tester[] = {"8"};
 int status = 0;
 
 int main() {
 
     //test case 1
     printf("The result of test case 1 is: \n");
-    double result1 = evaluate(tester, &status);
+    double result1 = evaluate(expression1, &status);
     printf("%f\n", result1);
 
     printf("\n");

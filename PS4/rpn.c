@@ -36,7 +36,15 @@ double evaluate (char* expression, int* status){
             //check if it is a number
             double numChecker = strtod(token, &status);
 
+            if (numChecker == 0){
+                *status = INVALIDINPUT;
+                clearStack();
+                receiveErrorMessage(*status);
+                return 0.0;
+            }
+
             if (isOperator(numChecker) == -1) {
+
                 push(createNode(numChecker, number));
             }
             else {
@@ -128,8 +136,13 @@ double evaluate (char* expression, int* status){
         receiveErrorMessage(*status);
         return 0.0;
     }
+    //put in case for success
+    /* *status = NOPROBLEM;
+    clearStack();
+    receiveErrorMessage(*status);
+    return peek() -> value;*/
 
-    }
+}
 
 
 int isOperator(char* token) {
@@ -152,6 +165,7 @@ int isOperator(char* token) {
             break;
         default:
             //check if it is a number - maybe use byte size?
+
             return -1;
             break;
     }
