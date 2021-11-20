@@ -137,10 +137,9 @@ double evaluate (char* expression, int* status){
         return 0.0;
     }
     //put in case for success
-    /* *status = NOPROBLEM;
-    clearStack();
+    *status = NOPROBLEM;
     receiveErrorMessage(*status);
-    return peek() -> value;*/
+    return peek() -> value;
 
 }
 

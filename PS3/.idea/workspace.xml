@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="PS3" targetName="PS3" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="03ebe943-4373-4aae-a090-71fadd003e5b" name="Changes" comment="ps3 final version *">
+      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node.c" beforeDir="false" afterPath="$PROJECT_DIR$/node.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PS4/errors.h" beforeDir="false" afterPath="$PROJECT_DIR$/../PS4/errors.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PS4/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/../PS4/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PS4/node.c" beforeDir="false" afterPath="$PROJECT_DIR$/../PS4/node.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PS4/node.h" beforeDir="false" afterPath="$PROJECT_DIR$/../PS4/node.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PS4/rpn.c" beforeDir="false" afterPath="$PROJECT_DIR$/../PS4/rpn.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PS4/rpn.h" beforeDir="false" afterPath="$PROJECT_DIR$/../PS4/rpn.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PS4/stack.c" beforeDir="false" afterPath="$PROJECT_DIR$/../PS4/stack.c" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="PS2" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2010OrQ7oIgQAqqjhdAWoeXtCWN" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="cidr.known.project.marker" value="true" />
+    <property name="cmake.loaded.for.project" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="CPPToolchains" />
+  </component>
+  <component name="RunManager">
+    <configuration name="PS3" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PS3" TARGET_NAME="PS3" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="PS3" RUN_TARGET_NAME="PS3">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="03ebe943-4373-4aae-a090-71fadd003e5b" name="Changes" comment="" />
+      <created>1635196757160</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1635196757160</updated>
+      <workItem from="1635196758890" duration="667000" />
+      <workItem from="1635283646896" duration="6324000" />
+      <workItem from="1635310336997" duration="12569000" />
+      <workItem from="1635438124522" duration="22933000" />
+      <workItem from="1635799535174" duration="24000" />
+      <workItem from="1635799563581" duration="390000" />
+      <workItem from="1635799959316" duration="883000" />
+      <workItem from="1636668970500" duration="514000" />
+    </task>
+    <task id="LOCAL-00001" summary="Initial PS3 commit">
+      <created>1635196838382</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1635196838383</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Implemented all files and and working on delete node function">
+      <created>1635314207971</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1635314207971</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Implemented all files and and working on delete node function">
+      <created>1635314220357</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1635314220357</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Implemented all files and and working on delete node function">
+      <created>1635373694952</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1635373694952</updated>
+    </task>
+    <task id="LOCAL-00005" summary="All functions done and working, still have to do bubble sort">
+      <created>1635443240490</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1635443240490</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Swap working need to implement it in bubble sort">
+      <created>1635457783232</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1635457783232</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Final version all test cases done in main">
+      <created>1635546072161</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1635546072161</updated>
+    </task>
+    <task id="LOCAL-00008" summary="PS3 Final version">
+      <created>1635547649030</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1635547649030</updated>
+    </task>
+    <task id="LOCAL-00009" summary="PS3 Final version with output">
+      <created>1635547889173</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1635547889173</updated>
+    </task>
+    <task id="LOCAL-00010" summary="ps3 final version *">
+      <created>1635799923570</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1635799923570</updated>
+    </task>
+    <task id="LOCAL-00011" summary="ps3 final version *">
+      <created>1635799985219</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1635799985219</updated>
+    </task>
+    <task id="LOCAL-00012" summary="ps3 final version *">
+      <created>1635800195046</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1635800195046</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial PS3 commit" />
+    <MESSAGE value="Implemented all files and and working on delete node function" />
+    <MESSAGE value="All functions done and working, still have to do bubble sort" />
+    <MESSAGE value="Swap working need to implement it in bubble sort" />
+    <MESSAGE value="Final version all test cases done in main" />
+    <MESSAGE value="PS3 Final version" />
+    <MESSAGE value="PS3 Final version with output" />
+    <MESSAGE value="ps3 final version *" />
+    <option name="LAST_COMMIT_MESSAGE" value="ps3 final version *" />
+  </component>
+</project>
