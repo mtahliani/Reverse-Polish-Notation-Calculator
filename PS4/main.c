@@ -65,6 +65,7 @@ int main() {
     printf("The result of test case 7 is: \n");
     double result7 = evaluate(expression7, &status);
     printf("%f\n", result7);
+    
 }
 
 
