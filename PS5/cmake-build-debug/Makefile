@@ -142,6 +142,33 @@ PS5/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PS5.dir/build.make CMakeFiles/PS5.dir/build
 .PHONY : PS5/fast
 
+errors.o: errors.c.o
+
+.PHONY : errors.o
+
+# target to build an object file
+errors.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PS5.dir/build.make CMakeFiles/PS5.dir/errors.c.o
+.PHONY : errors.c.o
+
+errors.i: errors.c.i
+
+.PHONY : errors.i
+
+# target to preprocess a source file
+errors.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PS5.dir/build.make CMakeFiles/PS5.dir/errors.c.i
+.PHONY : errors.c.i
+
+errors.s: errors.c.s
+
+.PHONY : errors.s
+
+# target to generate assembly for a file
+errors.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PS5.dir/build.make CMakeFiles/PS5.dir/errors.c.s
+.PHONY : errors.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -169,6 +196,114 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PS5.dir/build.make CMakeFiles/PS5.dir/main.c.s
 .PHONY : main.c.s
 
+node.o: node.c.o
+
+.PHONY : node.o
+
+# target to build an object file
+node.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PS5.dir/build.make CMakeFiles/PS5.dir/node.c.o
+.PHONY : node.c.o
+
+node.i: node.c.i
+
+.PHONY : node.i
+
+# target to preprocess a source file
+node.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PS5.dir/build.make CMakeFiles/PS5.dir/node.c.i
+.PHONY : node.c.i
+
+node.s: node.c.s
+
+.PHONY : node.s
+
+# target to generate assembly for a file
+node.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PS5.dir/build.make CMakeFiles/PS5.dir/node.c.s
+.PHONY : node.c.s
+
+rpn.o: rpn.c.o
+
+.PHONY : rpn.o
+
+# target to build an object file
+rpn.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PS5.dir/build.make CMakeFiles/PS5.dir/rpn.c.o
+.PHONY : rpn.c.o
+
+rpn.i: rpn.c.i
+
+.PHONY : rpn.i
+
+# target to preprocess a source file
+rpn.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PS5.dir/build.make CMakeFiles/PS5.dir/rpn.c.i
+.PHONY : rpn.c.i
+
+rpn.s: rpn.c.s
+
+.PHONY : rpn.s
+
+# target to generate assembly for a file
+rpn.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PS5.dir/build.make CMakeFiles/PS5.dir/rpn.c.s
+.PHONY : rpn.c.s
+
+rpnConverter.o: rpnConverter.c.o
+
+.PHONY : rpnConverter.o
+
+# target to build an object file
+rpnConverter.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PS5.dir/build.make CMakeFiles/PS5.dir/rpnConverter.c.o
+.PHONY : rpnConverter.c.o
+
+rpnConverter.i: rpnConverter.c.i
+
+.PHONY : rpnConverter.i
+
+# target to preprocess a source file
+rpnConverter.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PS5.dir/build.make CMakeFiles/PS5.dir/rpnConverter.c.i
+.PHONY : rpnConverter.c.i
+
+rpnConverter.s: rpnConverter.c.s
+
+.PHONY : rpnConverter.s
+
+# target to generate assembly for a file
+rpnConverter.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PS5.dir/build.make CMakeFiles/PS5.dir/rpnConverter.c.s
+.PHONY : rpnConverter.c.s
+
+stack.o: stack.c.o
+
+.PHONY : stack.o
+
+# target to build an object file
+stack.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PS5.dir/build.make CMakeFiles/PS5.dir/stack.c.o
+.PHONY : stack.c.o
+
+stack.i: stack.c.i
+
+.PHONY : stack.i
+
+# target to preprocess a source file
+stack.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PS5.dir/build.make CMakeFiles/PS5.dir/stack.c.i
+.PHONY : stack.c.i
+
+stack.s: stack.c.s
+
+.PHONY : stack.s
+
+# target to generate assembly for a file
+stack.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PS5.dir/build.make CMakeFiles/PS5.dir/stack.c.s
+.PHONY : stack.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -178,9 +313,24 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... PS5"
+	@echo "... errors.o"
+	@echo "... errors.i"
+	@echo "... errors.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... node.o"
+	@echo "... node.i"
+	@echo "... node.s"
+	@echo "... rpn.o"
+	@echo "... rpn.i"
+	@echo "... rpn.s"
+	@echo "... rpnConverter.o"
+	@echo "... rpnConverter.i"
+	@echo "... rpnConverter.s"
+	@echo "... stack.o"
+	@echo "... stack.i"
+	@echo "... stack.s"
 .PHONY : help
 
 

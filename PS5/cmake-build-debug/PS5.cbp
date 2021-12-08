@@ -74,7 +74,37 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/tmp/PS5/errors.c">
+			<Option target="PS5"/>
+		</Unit>
+		<Unit filename="/tmp/PS5/errors.h">
+			<Option target="PS5"/>
+		</Unit>
 		<Unit filename="/tmp/PS5/main.c">
+			<Option target="PS5"/>
+		</Unit>
+		<Unit filename="/tmp/PS5/node.c">
+			<Option target="PS5"/>
+		</Unit>
+		<Unit filename="/tmp/PS5/node.h">
+			<Option target="PS5"/>
+		</Unit>
+		<Unit filename="/tmp/PS5/rpn.c">
+			<Option target="PS5"/>
+		</Unit>
+		<Unit filename="/tmp/PS5/rpn.h">
+			<Option target="PS5"/>
+		</Unit>
+		<Unit filename="/tmp/PS5/rpnConverter.c">
+			<Option target="PS5"/>
+		</Unit>
+		<Unit filename="/tmp/PS5/rpnConverter.h">
+			<Option target="PS5"/>
+		</Unit>
+		<Unit filename="/tmp/PS5/stack.c">
+			<Option target="PS5"/>
+		</Unit>
+		<Unit filename="/tmp/PS5/stack.h">
 			<Option target="PS5"/>
 		</Unit>
 		<Unit filename="/tmp/PS5/CMakeLists.txt">
