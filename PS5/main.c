@@ -43,24 +43,15 @@ int main(int argc, char *argv[]) {
 
     // Parses through file line by line until it reaches the end
     while (fgets(dataLine, 100, input)) {
-        // Removes the trailing line and prints the infix notation
-        // read in by the infile to the outfile
-        dataLine[strcspn(dataLine, "\n")] = 0;
-        fprintf(data, "INFIX: %s\n", dataLine);
+        //check is the last one is a \n
 
-        // Converts expression from infix to postfix notation
-        char *expression = convertPostfix(dataLine);
-
-        // Prints postfix notation to the outfile
-        fprintf(data, "POSTFIX: %s\n", expression);
-
-        // Evaluates the postfix expression and prints
-        // the result to the outfile
-        double result = evaluate(expression, &status);
-        fprintf(data, "RESULT: %0.2f\n", result);
-
-        // For formatting purposes prints char on new line
-        fprintf(data, "\n");
+        if (dataLine [strlen(dataLine) - 1] == "\n"){
+            dataLine [strlen(dataLine) - 1] = "\0";
+        }
+       fprintf(data, "INFIX: %s", dataLine);
+       fprintf(data, "POSTFIX: %s\n", convertPostfix(dataLine));
+       fprintf(data, "RESULT: %s\n", evaluate(dataLine, &status));
+       fprintf(data, "\n");
     }
 
     // Closes input and data files since

@@ -1,0 +1,36 @@
+INFIX: 4 + 8 * 3
+POSTFIX: 4 8 3
+ * + 
+RESULT: 
+
+INFIX: ( 4 + 8 ) * 3
+POSTFIX: 4 8 + 3
+ * 
+RESULT: 
+
+INFIX: 6 + 9 + 4 ^ 2
+POSTFIX: 6 9 + 4 2
+ ^ + 
+RESULT: 
+
+INFIX: 46 + ( 8 * 4 ) / 2
+POSTFIX: 46 8 4 * 2
+ / + 
+RESULT: 
+
+INFIX: 7 ^ 2 * ( 25 + 10 / 5 ) - 13
+POSTFIX: 7 2 ^ 25 10 5 / + * 13
+ - * 
+RESULT: 
+
+INFIX: ( 18 / 3 ) ^ 2 + ( ( 13 + 7 ) * 5 ^ 2 )
+POSTFIX: 18 3 / 2 ^ 13 7 + 5 2 ^ * + 
+RESULT: 
+
+INFIX: ( 18 / 3 ) ^ 2 + ( ( 13 + 7 ) ) * 5 ^ 2 )
+POSTFIX: MSMPA
+RESULT: 
+
+INFIX: ( 18 / 3 ) ^ 2 + ( ( 13 + 7 ) * 5 ? 2 )POSTFIX: INVALIDOPERATOR
+RESULT: 
+
