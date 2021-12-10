@@ -14,6 +14,7 @@
 
 typedef struct node node;
 
+
 enum type {operator, number};
 
 node* createNode(double value, int type);

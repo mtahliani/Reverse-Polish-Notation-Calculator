@@ -29,6 +29,18 @@ double evaluate (char* expression, int* status){
         receiveErrorMessage(*status);
         return 0.0;
     }
+   if (strcmp(expression, "MISMATCHEDPARENTHESIS") == 0){
+        *status = MISMATCHEDPARENTHESIS;
+        clearStack();
+        receiveErrorMessage(*status);
+        return 0.0;
+    }
+   if (strcmp(expression, "INVALIDINPUT") == 0){
+       *status = INVALIDINPUT;
+       clearStack();
+       receiveErrorMessage(*status);
+       return 0.0;
+   }
 
     while (token != NULL) {
 
@@ -132,12 +144,12 @@ double evaluate (char* expression, int* status){
         }
         token = strtok(NULL, " ");
     }
-    if (peek() -> next != NULL){
+    /*if (peek() -> next != NULL){
         *status = TOOMANYOPERANDS;
         clearStack();
         receiveErrorMessage(*status);
         return 0.0;
-    }
+    }*/
     //put in case for success
     *status = NOPROBLEM;
     receiveErrorMessage(*status);

@@ -18,6 +18,17 @@ typedef struct node {
     struct node *next;
 } node;
 
+/*typedef struct node {
+    union {
+        double value;
+        char operator;
+    } contents;
+    int type;
+    int precedence;
+    double value;
+    node *next;
+} node;
+ */
 
 node* HEAD = NULL;
 

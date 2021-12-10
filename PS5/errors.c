@@ -18,7 +18,8 @@ char* errorMessages[] = {
         "ERROR: too little operands. the stack is left with an extra operator.",
         "ERROR: divide by zero. you cannot divide a value by zero.",
         "ERROR: empty stack. the stack is empty and is not left with only one operand.",
-        "ERROR: cannot use a decimal as an exponent."
+        "ERROR: mismatched parenthesis",
+        "ERROR: mismatched parenthesis."
 };
 void receiveErrorMessage(int errorCode) {
     printf("%s\n", errorMessages[errorCode]);

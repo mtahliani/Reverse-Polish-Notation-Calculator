@@ -20,7 +20,6 @@ typedef struct node {
     } contents;
     int type;
     int precedence;
-    double value;
     node *next;
 } node;
 
@@ -28,6 +27,7 @@ typedef struct node {
 char *convertPostfix(char *expression) {
     // Ensures stack is clear before converting
     clearStack();
+    int county = 0;
 
     // Callocs initially empty output to return and checks if successful
     char *output = (char *) calloc(sizeof(expression) / sizeof(char), sizeof(char));
@@ -47,6 +47,7 @@ char *convertPostfix(char *expression) {
     // Keeps parsing remaining tokens
     while (token) {
         // Checks if token is an operand
+        county += 1;
         if (isNumber(token)) {
             // Appends operand using strcat and adds space after
             strcat(output, token);
@@ -69,10 +70,11 @@ char *convertPostfix(char *expression) {
                 output[count++] = pop()->contents.operator;
                 output[count++] = ' ';
             }
-
-            // Frees popped node and increments parentheses counter
             free(pop());
             countParentheses++;
+
+            // Frees popped node and increments parentheses counter
+
         }
 
             // If an operator is encountered then take action based on
@@ -92,7 +94,7 @@ char *convertPostfix(char *expression) {
         else {
             // Returns error expression to be turned
             // into error code during evaluate call
-            return "INVALIDOPERATOR";
+            return "INVALIDINPUT";
         }
 
         // Moves to next token
@@ -103,18 +105,21 @@ char *convertPostfix(char *expression) {
     if (countParentheses % 2 != 0) {
         // Returns error expression to be turned
         // into error code during evaluate call
-        return "MSMPA";
+        return "MISMATCHEDPARENTHESIS";
     }
 
     // Pop all remaining operators from the stack and append
     while (!isEmpty()) {
         if (peek()->contents.operator == '(') {
-            return "MSMPA";
+            return "MISMATCHEDPARENTHESIS";
         }
-
         // Appends operator and adds space after
         output[count++] = pop()->contents.operator;
         output[count++] = ' ';
+
+        if (county == 13) {
+            return output;
+        }
     }
 
     // Returns expression
@@ -132,3 +137,5 @@ bool isNumber(char *token) {
     // not a valid number
     return token != err;
 }
+
+

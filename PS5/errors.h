@@ -16,6 +16,7 @@
 #define TOOLITTLEOPERANDS 4
 #define DIVIDEBYZERO 5
 #define DECIMALPOWER 6
+#define MISMATCHEDPARENTHESIS 7
 
 void receiveErrorMessage(int errorCode);
 

@@ -20,17 +20,19 @@ typedef struct node {
 } node;
 
 int main(int argc, char *argv[]) {
+
+
     // PS5.0 Evaluate Expressions
     // Global variables
     int status = 0;     // Status code for error checking
     char dataLine[100];     // Stores input strings from infile
+
 
     // Checks if there are any missing CLI arguments before reading files
     if (argc < 3) {
         printf("Missing CLI Argument(s)\n");
         return -1;
     }
-
     // Reads and writes data from infile and outfile
     FILE *input = fopen(argv[1], "r");
     FILE *data = fopen(argv[2], "w");
@@ -45,13 +47,21 @@ int main(int argc, char *argv[]) {
     while (fgets(dataLine, 100, input)) {
         //check is the last one is a \n
 
-        if (dataLine [strlen(dataLine) - 1] == "\n"){
-            dataLine [strlen(dataLine) - 1] = "\0";
-        }
-       fprintf(data, "INFIX: %s", dataLine);
-       fprintf(data, "POSTFIX: %s\n", convertPostfix(dataLine));
-       fprintf(data, "RESULT: %s\n", evaluate(dataLine, &status));
-       fprintf(data, "\n");
+        //if (dataLine [strlen(dataLine) - 1] == "\n"){
+            //dataLine[strlen(dataLine) - 1] = "\0";
+        //}
+
+        dataLine[strcspn(dataLine, "\n")] = 0;
+        fprintf(data, "INFIX: %s", dataLine);
+        fprintf(data, "\n");
+
+        char* expression = convertPostfix(dataLine);
+
+        fprintf(data, "POSTFIX: %s\n", expression);
+
+        double result = evaluate(expression, &status);
+        fprintf(data, "RESULT: %f\n", result); //put in result of evaluations
+        fprintf(data, "\n");
     }
 
     // Closes input and data files since
@@ -61,3 +71,6 @@ int main(int argc, char *argv[]) {
 
     return 0;
 }
+
+
+
