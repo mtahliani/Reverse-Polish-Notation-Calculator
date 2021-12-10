@@ -21,23 +21,21 @@ typedef struct node {
 
 int main(int argc, char *argv[]) {
 
-
-    // PS5.0 Evaluate Expressions
-    // Global variables
     int status = 0;     // Status code for error checking
     char dataLine[100];     // Stores input strings from infile
 
 
-    // Checks if there are any missing CLI arguments before reading files
+    // Checks for missing CLI files
     if (argc < 3) {
         printf("Missing CLI Argument(s)\n");
         return -1;
     }
+
     // Reads and writes data from infile and outfile
     FILE *input = fopen(argv[1], "r");
     FILE *data = fopen(argv[2], "w");
 
-    // Checks if I/O paths are correct and/or exist
+    // Checks for I/O paths
     if (!input) {
         perror("I/O error: ");
         return -1;
@@ -45,7 +43,7 @@ int main(int argc, char *argv[]) {
 
     // Parses through file line by line until it reaches the end
     while (fgets(dataLine, 100, input)) {
-        //check is the last one is a \n
+
 
         //if (dataLine [strlen(dataLine) - 1] == "\n"){
             //dataLine[strlen(dataLine) - 1] = "\0";
@@ -64,8 +62,6 @@ int main(int argc, char *argv[]) {
         fprintf(data, "\n");
     }
 
-    // Closes input and data files since
-    // they are no longer in use
     fclose(input);
     fclose(data);
 

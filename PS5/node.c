@@ -45,7 +45,7 @@ node* createNode (double value, int type) {
 }
 
 int assignRank(char operator) {
-    // Lists possible operators and returns correct precedence
+    //returns precedence for each operator
     if (operator == '(' || operator == ')') {
         return 1;
     } else if (operator == '+' || operator == '-') {
@@ -54,8 +54,9 @@ int assignRank(char operator) {
         return 3;
     } else if (operator == '^') {
         return 4;
-    } else {    // Error handling will be done in evaluate (rpn.c)
+    } else {
         return -1;
+        //error handling in rpn.c
     }
 }
 

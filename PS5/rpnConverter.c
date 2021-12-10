@@ -12,7 +12,6 @@
 #include "rpn.h"
 
 
-// Definition of a node
 typedef struct node {
     union {
         double value;
@@ -23,97 +22,95 @@ typedef struct node {
     node *next;
 } node;
 
-// convertPostfix - Converts an expression from infix to postfix notation
+
 char *convertPostfix(char *expression) {
-    // Ensures stack is clear before converting
+
     clearStack();
     int county = 0;
 
-    // Callocs initially empty output to return and checks if successful
+    // calloc - initially empty output to return
     char *output = (char *) calloc(sizeof(expression) / sizeof(char), sizeof(char));
+
     if (!output) {
+        //see if malloc was successful
         printf("Memory allocation failed\n");
         return NULL;
     }
 
-    // Creates an counter to keep track of array index and a counter
-    // to track how many parenthesis there are for error checking
     int count = 0;
     int countParentheses = 0;
+    //array index and num of parenthesis for error handling
 
-    // Returns first token
+
     char *token = strtok(expression, " ");
 
-    // Keeps parsing remaining tokens
+
     while (token) {
-        // Checks if token is an operand
         county += 1;
+        //check if token is an operand
         if (isNumber(token)) {
-            // Appends operand using strcat and adds space after
+
             strcat(output, token);
             count += strlen(token);
             output[count++] = ' ';
         }
 
-            // Checks if token is a left parenthesis
+            //check if left parenthesis
         else if (*token == '(') {
-            // Pushes parenthesis and increments counter
             push(createNode(*token, operator));
             countParentheses++;
         }
 
-            // Checks if scanned token is a right parenthesis and
-            // appends it to output until a left parenthesis is found
+
         else if (*token == ')') {
+            // checks if scanned token is a right parenthesis and
+            // appends it to output until a left parenthesis is found
             while (!isEmpty() && peek()->contents.operator != '(') {
-                // Appends operator and adds space after
                 output[count++] = pop()->contents.operator;
                 output[count++] = ' ';
             }
             free(pop());
             countParentheses++;
 
-            // Frees popped node and increments parentheses counter
+            //free popped node and increment parentheses counter
 
         }
 
-            // If an operator is encountered then take action based on
-            // the precedence of the operator
+
         else if (isOperator(token) != -1) {
+            //case for operator
             while (!isEmpty() && assignRank(*token) <= peek()->precedence) {
-                // Appends operator and adds space after
+
                 output[count++] = pop()->contents.operator;
                 output[count++] = ' ';
             }
 
-            // Otherwise push operator to stack
+            //push operator to stack
             push(createNode(*token, operator));
         }
 
-            // If the operator is invalid
+
         else {
-            // Returns error expression to be turned
-            // into error code during evaluate call
+            //case for invalid input
             return "INVALIDINPUT";
         }
 
-        // Moves to next token
+
         token = strtok(NULL, " ");
     }
 
-    // Check if there are mismatched parentheses
+
     if (countParentheses % 2 != 0) {
-        // Returns error expression to be turned
-        // into error code during evaluate call
+        //mismatched parenthesis
         return "MISMATCHEDPARENTHESIS";
     }
 
-    // Pop all remaining operators from the stack and append
+    // pop all remaining operators
     while (!isEmpty()) {
         if (peek()->contents.operator == '(') {
             return "MISMATCHEDPARENTHESIS";
         }
-        // Appends operator and adds space after
+
         output[count++] = pop()->contents.operator;
         output[count++] = ' ';
 
@@ -122,19 +119,17 @@ char *convertPostfix(char *expression) {
         }
     }
 
-    // Returns expression
     return output;
 }
 
-// HELPER FUNCTIONS
-// isNumber - Checks if token is a number using strtod
+
+
 bool isNumber(char *token) {
-    // Creates indicator for conversion and performs strtod operation
+    //check if token is a number
     char *err;
     strtod(token, &err);
 
-    // If the conversion is not modified then the token is
-    // not a valid number
+
     return token != err;
 }
 
